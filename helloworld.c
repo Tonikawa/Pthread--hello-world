@@ -4,9 +4,27 @@
 
 int thread_count;
 
-void *Hello(void*rank);
+void* Thread_sum(void* rank){
+    long my_rank = (long) rank;
+    double factor long long i;
+    long long my_n = n/thread_count;
+    long long my_first_i= my_n*my_rank;
+    long long my_last_i = my_first_i + my_n;
 
-int main(int argc, char* argv[]) {
+    if (my_first_i % 2 == 0){
+      factor = 1.0
+    } /* my_first_i is factor = 1.0;*/
+    else{
+      factor = -1.0
+    } /* my_first_i is odd */
+    
+    for (i = my_first_i; i < my_last_i; i++, factor = -factor){
+     sum += factor/(2*i+1);      
+    }  
+  return NULL;
+}
+
+int main(void) {
   long       thread;
   pthread_t* thread_handles;
   thread_count = strtol(argv[1], NULL, 10);
